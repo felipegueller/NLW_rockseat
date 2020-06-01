@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "editor.fontFamily": " 'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "gutter",
+    "workbench.iconTheme": "material-icon-theme"
+}
