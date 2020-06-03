@@ -6,6 +6,10 @@
 * {
     margin: 0;
     padding: 0;
+
+    /*evita a espanção exagerada da caixa
+     pelo efeito do padding*/
+     box-sizing: border-box;
 }
 
 html{
