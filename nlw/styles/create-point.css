@@ -1,12 +1,15 @@
 
 #page-create-point {
-    width: 90px;
+    width: 90%;
     max-width: 1100px;
 
     /* Alinhamento de caixa (pelo lado de fora da caixa) */
     margin: 0 auto;
 }
 
+/* Essa parte do código que não tá pegando o 
+   justify-content, dai o arquivo tá zuado;
+*/
 #page-create-point header {
     margin-top: 48px;
 
@@ -42,4 +45,109 @@ form {
     border-radius: 8px;
 
     max-width: 730px;
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+
+    /* Retira a borda lateral do fieldset */    
+    border:0;
+}
+
+for legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field{
+
+    /* utiliza todo o espaço disponível para os campos(fields) */
+    flex: 1;
+
+    display: flex;
+
+    /* estica os campos / muda a a disposição dos campos para coluna  */
+    flex-direction: column; 
+
+    /* Margem de 24px para baixo entre os fields */
+    margin-bottom: 24px;
+}
+
+form .field-group {
+
+    /* possibilita aos campos(fields) a ficarem um ao lado do outro */
+    display: flex;
+}
+
+
+/* Essa virgula e a descrição de outro componente permite fazer o reuso de código.
+   Neste caso, aproveita essas propriedades para o select  */
+form input,
+form select {
+
+    background-color: #f0f0f5;
+    border: 0;
+
+    /* 16px no top/bottom e 24px para right/left */
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+
+    /* Retira aquela borda preta au selecionar o campo (Opcional) */
+    /*outline: none;*/
+
+}
+
+form select{
+
+    /* Reseta as opções de estilo padrões dos navegadores, permitindo que as 
+       nossas alterações sejam possíveis no campo select*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+     appearance: none;
+}
+
+form label {
+    font-size: 14px;
+
+    /* para separar um pouco os labels dos texts fields */
+    margin-bottom: 8px;
+}
+
+/* Estas regras implementadas aqui abaixo são para desgrudar os fields
+   que são seguido por outros filds. Neste caso especifífico, os filds a direita*/
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+
+form button {
+    margin-top: 40px;
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: 0;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+
+    /* Define o tempo da transição em Milissegundos */
+    /* Mas sem específicações ele altera a transição
+       para todos atributos passados nesse bloco*/
+    /*transition: 400ms;*/
+
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background-color: #2fb86e;
 }

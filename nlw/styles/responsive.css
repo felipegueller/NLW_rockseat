@@ -19,7 +19,7 @@
     }
 
     #page-home main {
-        align-items: center;;
+        align-items: center;
     }
 }
 
@@ -29,7 +29,8 @@
     }
 }
 
-@media (min-height: 760px){
+/* Altura máxima que ele vai pegar*/
+@media (max-height: 760px){
     #page-home{
         background-position-y: 200px;
     }
